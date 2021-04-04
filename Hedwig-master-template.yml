@@ -93,6 +93,7 @@ Resources:
                   - logs:CreateLogStream
                   - logs:PutLogEvents
                   - ecr:GetAuthorizationToken
+                  - secretsmanager:*
 
   CodeBuildCIFrontend:
     Type: AWS::CodeBuild::Project
@@ -160,6 +161,7 @@ Resources:
                   - s3:CreateJob
                   - s3:HeadBucket
                   - s3:ListObjectsV2
+                  - secretsmanager:*
               - Action:
                   - s3:*
                 Effect: Allow
