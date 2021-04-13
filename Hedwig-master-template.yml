@@ -41,7 +41,7 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       AccessControl: BucketOwnerFullControl
-      BucketName: !Join ["-", [!Ref ProjectName, !Ref Stage, "bucket"]]
+      BucketName: !Join [".", [!Ref Stage, "ghallerya", ".com"]]
       WebsiteConfiguration:
         IndexDocument: index.html
         ErrorDocument: index.html
